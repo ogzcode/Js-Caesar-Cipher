@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    line-height: 1.5rem;
-    letter-spacing: .05rem;
 }
 
 body {
@@ -12,55 +10,51 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: brown;
     flex-direction: column;
 }
 
 .container {
-    min-width: 400px;
-    background-color: rgb(240, 240, 240);
-    padding: 3rem 1rem 1rem 1rem;
+    min-width: 480px;
+    background-color: wheat;
+    padding: 2rem;
+    border-radius: 4px;
     text-align: center;
-    margin: 1rem 0;
-    border-radius: .5rem;
-    box-shadow: 1px 3px 9px -1px rgb(0, 0, 0, .2),
-                0px 0px 3px -1px rgba(0,0,0,.25);
+    margin-bottom: 2rem;
 }
 
-.box {
-    display: flex;
-}
-
-span {
-    flex: 1;
-    margin-left: 1rem;
-    background-color: #1488f5;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    border-radius: .25rem;
-    color: white;
-    font-weight: bold;
-}
-
-input {
-    flex: 3;
-    font-size: 1rem;
+.input {
+    width: 100%;
+    padding: 8px;
     outline: none;
-    padding: .5rem .5rem;
-    border-radius: .25rem;
     border: none;
-    color: rgba(0,0,0,.5);
-    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.1);
+    color: #7e171a;
 }
 
 .btn {
-    display: block;
-    text-align: center;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    background-color: #9b1d22;
     border: none;
-    font-size: 1rem;
-    margin-top: 2rem;
-    padding: .5rem;
-    background-color: #1488f5;
+    border-radius: 4px;
     color: white;
-    width: 100%;
-    border-radius: .25rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.1);
+}
+
+.btn:hover {
+    opacity: .8;
+}
+
+.text {
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px 0;
+    color: white;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.1);
+    /*color: #7e171a;*/
 }
