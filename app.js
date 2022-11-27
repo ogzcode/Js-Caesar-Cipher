@@ -31,6 +31,15 @@ function decrypt(value){
     return result;
 }
 
+function cryptCalc(cryptTextNode, cryptFunc, resultNode){
+    let res = cryptFunc(cryptTextNode.value.toUpperCase());
+    if (res !== ""){
+        resultNode.innerText = res;
+        resultNode.style.color = "#9b1d22";
+        cryptTextNode.value = "";
+    }
+}
+
 const encryptInput = document.getElementById("encrypt-input");
 const encryptBtn = document.getElementById("encrypt-btn");
 const cipherText = document.getElementById("cipher-text");
@@ -41,15 +50,11 @@ const normalText = document.getElementById("normal-text");
 
 
 encryptBtn.addEventListener("click", () => {
-    cipherText.innerText = encrypt(encryptInput.value.toUpperCase());
-    cipherText.style.color = "#9b1d22";
-    encryptInput.value = "";
+    cryptCalc(encryptInput, encrypt, cipherText);
 });
 
 decryptBtn.addEventListener("click", () => {
-    normalText.innerText = decrypt(decryptInput.value.toUpperCase());
-    normalText.style.color = "#9b1d22";
-    decryptInput.value = "";
+    cryptCalc(decryptInput, decrypt, normalText);
 });
 
 
