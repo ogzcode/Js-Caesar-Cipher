@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import Layout from '../layout/Layout.vue'
 
 const router = createRouter({
@@ -12,7 +11,12 @@ const router = createRouter({
         {
           path: '',
           name: 'home',
-          component: HomeView,
+          redirect: '/reveal-text'
+        },
+        {
+          path: '/reveal-text',
+          name: 'reveal-text',
+          component: () => import('../views/text/RevealText.vue')
         }
       ]
     }
