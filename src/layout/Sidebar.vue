@@ -26,6 +26,7 @@
                         :label="item.label"
                         :icon="item.icon"
                         :menu-key="item.key"
+                        :route="item.route"
                         :is-active="activeMenuItem === item.key"
                         :aria-label="item.ariaLabel"
                         @menu-click="handleMenuClick"
@@ -38,15 +39,24 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import MenuItem from '@/components/MenuItem.vue'
 import { menuData } from '@/data/menuData'
-import type { MenuItem as MenuItemType } from '@/types/menu'
 
-const activeMenuItem = ref<string>('dashboard')
+const router = useRouter()
+const route = useRoute()
+
+const activeMenuItem = ref<string>('reveal-text')
 
 const handleMenuClick = (menuKey: string): void => {
     activeMenuItem.value = menuKey
     console.log(`${menuKey} menüsüne tıklandı`)
+    
+    // Router navigation
+    const routePath = `/${menuKey}`
+    if (route.path !== routePath) {
+        router.push(routePath)
+    }
 }
 </script>
 

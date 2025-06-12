@@ -5,7 +5,7 @@
         <div class="flex flex-col flex-1">
         
             <main class="flex-1 p-6">
-                <slot />
+                <router-view />
             </main>
         </div>
     </div>
