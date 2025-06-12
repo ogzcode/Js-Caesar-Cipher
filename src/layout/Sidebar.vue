@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-64 bg-white shadow-lg border-r border-gray-200 flex flex-col">
+    <aside class="w-64 h-screen bg-white shadow-lg border-r border-gray-200 flex flex-col">
         <div class="p-4 border-b border-gray-200">
             <h2 class="text-lg font-semibold text-gray-800">Menu</h2>
         </div>

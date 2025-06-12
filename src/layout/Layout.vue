@@ -1,13 +1,9 @@
-<template>  
-    <div class="flex min-h-screen bg-gray-50">
+<template>
+    <div class="flex h-screen bg-gray-50">
         <Sidebar />
-        
-        <div class="flex flex-col flex-1">
-        
-            <main class="flex-1 p-6">
-                <router-view />
-            </main>
-        </div>
+        <main class="flex-1 h-screen overflow-y-auto p-6">
+            <router-view />
+        </main>
     </div>
 </template>
 
@@ -15,6 +11,4 @@
 import Sidebar from './Sidebar.vue'
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
