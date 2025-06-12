@@ -6,7 +6,8 @@ import {
     FileText,
     BarChart3,
     DollarSign,
-    Settings
+    Settings,
+    Type
 } from 'lucide-vue-next'
 
 export const menuIcons = {
@@ -16,18 +17,20 @@ export const menuIcons = {
     reports: FileText,
     analytics: BarChart3,
     finance: DollarSign,
-    settings: Settings
+    settings: Settings,
+    type: Type
 }
 
 export const menuData: MenuData = [
     {
-        title: 'Ana Sayfa',
+        title: 'Text',
         items: [
             {
-                key: 'dashboard',
-                label: 'Dashboard',
-                icon: 'dashboard',
-                ariaLabel: 'Dashboard sayfasına git'
+                key: 'reveal-text',
+                label: 'Reveal Text',
+                icon: 'type',
+                ariaLabel: 'Reveal Text',
+                route: '/reveal-text'
             }
         ]
     },
@@ -38,13 +41,15 @@ export const menuData: MenuData = [
                 key: 'users',
                 label: 'Kullanıcılar',
                 icon: 'users',
-                ariaLabel: 'Kullanıcılar sayfasına git'
+                ariaLabel: 'Kullanıcılar sayfasına git',
+                route: '/users'
             },
             {
                 key: 'products',
                 label: 'Ürünler',
                 icon: 'products',
-                ariaLabel: 'Ürünler sayfasına git'
+                ariaLabel: 'Ürünler sayfasına git',
+                route: '/products'
             }
         ]
     },
@@ -55,19 +60,22 @@ export const menuData: MenuData = [
                 key: 'reports',
                 label: 'Raporlar',
                 icon: 'reports',
-                ariaLabel: 'Raporlar sayfasına git'
+                ariaLabel: 'Raporlar sayfasına git',
+                route: '/reports'
             },
             {
                 key: 'analytics',
                 label: 'Analitik',
                 icon: 'analytics',
-                ariaLabel: 'Analitik sayfasına git'
+                ariaLabel: 'Analitik sayfasına git',
+                route: '/analytics'
             },
             {
                 key: 'finance',
                 label: 'Finans',
                 icon: 'finance',
-                ariaLabel: 'Finans sayfasına git'
+                ariaLabel: 'Finans sayfasına git',
+                route: '/finance'
             }
         ]
     },
@@ -78,7 +86,8 @@ export const menuData: MenuData = [
                 key: 'settings',
                 label: 'Ayarlar',
                 icon: 'settings',
-                ariaLabel: 'Ayarlar sayfasına git'
+                ariaLabel: 'Ayarlar sayfasına git',
+                route: '/settings'
             }
         ]
     }

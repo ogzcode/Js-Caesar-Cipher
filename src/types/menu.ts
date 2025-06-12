@@ -3,6 +3,7 @@ export interface MenuItem {
     label: string
     icon: string
     ariaLabel?: string
+    route?: string
 }
 
 export interface MenuGroup {
