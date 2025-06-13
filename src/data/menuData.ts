@@ -7,7 +7,8 @@ import {
     BarChart3,
     DollarSign,
     Settings,
-    Type
+    Type,
+    Star
 } from 'lucide-vue-next'
 
 export const menuIcons = {
@@ -18,10 +19,23 @@ export const menuIcons = {
     analytics: BarChart3,
     finance: DollarSign,
     settings: Settings,
-    type: Type
+    type: Type,
+    bounce: Star
 }
 
 export const menuData: MenuData = [
+    {
+        title: 'Basic Animations',
+        items: [
+            {
+                key: 'bounce',
+                label: 'Bounce',
+                icon: 'bounce',
+                ariaLabel: 'Bounce',
+                route: '/bounce'
+            }
+        ]
+    },
     {
         title: 'Text',
         items: [
@@ -35,59 +49,14 @@ export const menuData: MenuData = [
         ]
     },
     {
-        title: 'Yönetim',
+        title: 'Advanced Animations',
         items: [
             {
-                key: 'users',
-                label: 'Kullanıcılar',
-                icon: 'users',
-                ariaLabel: 'Kullanıcılar sayfasına git',
-                route: '/users'
-            },
-            {
-                key: 'products',
-                label: 'Ürünler',
-                icon: 'products',
-                ariaLabel: 'Ürünler sayfasına git',
-                route: '/products'
-            }
-        ]
-    },
-    {
-        title: 'Raporlar',
-        items: [
-            {
-                key: 'reports',
-                label: 'Raporlar',
-                icon: 'reports',
-                ariaLabel: 'Raporlar sayfasına git',
-                route: '/reports'
-            },
-            {
-                key: 'analytics',
-                label: 'Analitik',
-                icon: 'analytics',
-                ariaLabel: 'Analitik sayfasına git',
-                route: '/analytics'
-            },
-            {
-                key: 'finance',
-                label: 'Finans',
-                icon: 'finance',
-                ariaLabel: 'Finans sayfasına git',
-                route: '/finance'
-            }
-        ]
-    },
-    {
-        title: 'Sistem',
-        items: [
-            {
-                key: 'settings',
-                label: 'Ayarlar',
-                icon: 'settings',
-                ariaLabel: 'Ayarlar sayfasına git',
-                route: '/settings'
+                key: 'slider',
+                label: 'Slider',
+                icon: 'slider',
+                ariaLabel: 'Slider',
+                route: '/slider'
             }
         ]
     }

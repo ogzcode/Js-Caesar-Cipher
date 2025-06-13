@@ -11,12 +11,22 @@ const router = createRouter({
         {
           path: '',
           name: 'home',
-          redirect: '/reveal-text'
+          redirect: '/bounce'
         },
         {
           path: '/reveal-text',
           name: 'reveal-text',
           component: () => import('../views/text/RevealText.vue')
+        },
+        {
+          path: '/bounce',
+          name: 'bounce',
+          component: () => import('../views/basic/BounceView.vue')
+        },
+        {
+          path: '/slider',
+          name: 'slider',
+          component: () => import('../views/advanced/SliderView.vue')
         }
       ]
     }
